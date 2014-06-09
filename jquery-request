@@ -1,0 +1,30 @@
+/*jQuery.post("/api/users", {
+  "username": "tags-user",  
+  "password": "1234",  
+  "password_confirmation": "1234",
+  "categories": [{"name": "tags"}]
+
+}, function(data, textStatus, jqXHR) { 
+    console.log("Post resposne:"); console.dir(data); console.log(textStatus); console.dir(jqXHR); 
+});*/
+
+/*jQuery.ajax({
+    url: "/api/users/537289869efe674739adeadb", 
+    type: "DELETE",
+    success: function (data, textStatus, jqXHR) { 
+        console.log("Post resposne:"); 
+        console.dir(data); 
+        console.log(textStatus); 
+        console.dir(jqXHR); 
+    }
+});*/ 
+
+/*jQuery.post("/admin/products", {
+  "name": "Quantum Syrah",  
+  "year": "2011",  
+  "description": "Vino wapo",
+  "images": [{"kind": "detail", url:"/images/quantum-blend.jpg"}]
+
+}, function(data, textStatus, jqXHR) { 
+    console.log("Post resposne:"); console.dir(data); console.log(textStatus); console.dir(jqXHR); 
+});*/

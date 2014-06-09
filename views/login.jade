@@ -1,0 +1,11 @@
+extends page
+block page
+  if badCredentials
+    p The login information you entered is not correct
+
+  form(action='/admin' method='post')
+    input(type='hidden', name='_csrf', value="#{csrf}")
+    Username: input(type='text' name='username')
+    Password: input(type='password' name='password')
+
+    button(type='submit') Log in

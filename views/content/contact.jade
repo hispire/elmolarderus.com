@@ -1,0 +1,89 @@
+section.l-col--12-of-12.background__color--neutral-loud.bg__texture--noise.spacer__padding-right--size-small.spacer__padding-left--size-small.spacer__padding-top--size-xxlarge.spacer__padding-bottom--size-xxlarge(id="contact")
+  article.spacer__padding-top--size-large(class=blocks['text-area--neutral-soft'])
+    h3= __("podemos ayudarte")
+    - if (messages.info)
+      div.foreground--success(class=blocks['container--rounded-flash'])
+        span.flash__msg= messages.info
+    - if (messages.error)
+      div.foreground--error(class=blocks['container--rounded-flash'])
+        span.flash__msg= messages.error
+    div.l.l-col--12-of-12.l-col--8-of-12-sm
+      form(id="contact-form" method='post',action='/contact')
+        input(type='hidden', name='_csrf', value=token)
+        div.l-col--10-of-12
+          div
+            label(for='name')= __("nombre") + ':'
+          - if (messages.valErrors)
+            - each err in messages.valErrors
+              -if (err.param === 'name')
+                div.l-col--12-of-12.l-col--6-of-12-sm.foreground--error(class=blocks['container--rounded-flash'])
+                  span.flash__msg= err.msg
+          - if(messages.dataForm)
+            input.l-col--12-of-12.l-col--6-of-12-sm(class=blocks['form__input--rounded'] type='text',name='name',id='name', placeholder= __("nombre"), value=messages.dataForm[0].name)
+          - else
+            input.l-col--12-of-12.l-col--6-of-12-sm(class=blocks['form__input--rounded'] type='text',name='name',id='name', placeholder=__("nombre"))
+          div
+            label(for='email')= __("correo electronico") + ':'
+          - if (messages.valErrors)
+            - each err in messages.valErrors
+              -if (err.param === 'email')
+                div.l-col--12-of-12.l-col--6-of-12-sm.foreground--error(class=blocks['container--rounded-flash'])
+                  span.flash__msg= err.msg
+          - if(messages.dataForm)
+            input.l-col--12-of-12.l-col--6-of-12-sm(class=blocks['form__input--rounded'] type='text',name='email',id='email', placeholder= __("correo electronico"), value=messages.dataForm[0].email)
+          - else
+            input.l-col--12-of-12.l-col--6-of-12-sm(class=blocks['form__input--rounded'] type='text',name='email',id='email', placeholder= __("correo electronico"))
+        div.l-col--10-of-12.l--align-center.spacer__margin-bottom--size-large(class=blocks['island--small'])
+          h4= __("cuentanos que necesitas")
+          p= __("contacto 1")
+        
+        
+        div.l-col--10-of-12.spacer__margin-bottom--size-large
+          div
+            label(for='subject')= __("asunto")
+          select(class=blocks['form__input--rounded'] name='subject',id='subject')
+            option(value='Pedido de productos')= __("pedir productos")
+            option(value='Reserva casa rural')= __("consultar disponibilidad")
+            option(value='Otro asunto')= __("otro asunto")
+          div
+            label(for='message')= __("mensaje")
+          - if (messages.valErrors)
+            - each err in messages.valErrors
+              -if (err.param === 'message')
+                div.foreground--error(class=blocks['container--rounded-flash'])
+                  span.flash__msg= err.msg
+          textarea.l-col--12-of-12.spacer__margin-bottom--size-small(class=blocks['form__input--rounded'] name='message', id='message', placeholder='Hola Rus, me gustaría...')  
+          input.l-col--4-of-12.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] type='submit',name='submit',id='submit', value= __("enviar"))
+    div.l.l-col--12-of-12.l-col--4-of-12-sm.l--last-sm
+      //h4 Personas de contacto
+      div.spacer__margin-bottom--size-large
+        h5= __("info rus")
+        div(class=blocks['media__figure--large'])
+          img.container__box-shadow--intensity-loud.container__border-radius--size-medium(src='/images/foto-rus.jpg' alt="foto rus")
+        div(class=blocks['media__content--large'])
+          p 
+            strong Rus Jiménez Moya
+          a.link--tel(href="tel:+34-647-075-371")
+            p
+              span(aria-hidden="true" data-icon!="&#xe63e;")   
+              | +34 647 075 371
+          a(href="mailto:info@elmolarderus.com")
+            p
+              span(aria-hidden="true" data-icon!="&#xe763;")   
+              | info@elmolarderus.com
+          a.link--fb(href="https://www.facebook.com/pages/El-Molar-de-Rus/146301258753835")
+            p
+              span(aria-hidden="true" data-icon!="&#xe602;")   
+              | Finca El Molar de Rus
+      div.spacer__margin-bottom--size-large
+        h5= __("info mariano")
+        div(class=blocks['media__figure--large'])
+          img.container__box-shadow--intensity-loud.container__border-radius--size-medium(src='/images/avatar.jpg')
+        div(class=blocks['media__content--large'])
+          p 
+            strong Mariano Muñoz Lozano
+          a.link--tel(href="tel:+34-609-659-080")
+            p 
+              span(aria-hidden="true" data-icon!="&#xe63e;")   
+              | +34 609 659 080
+

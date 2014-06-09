@@ -1,0 +1,36 @@
+extends page
+block page
+  a(href='/lang/es') Espanol
+  a(href='/lang/en') English
+  p= __("bienvenido")
+  p= __("bienvenido2")
+  p= __("bienvenido3")
+  
+  h2= __("titulo productos")
+  p List of users:
+
+  p Try visiting the 
+    a(href='/secret') secret
+    a(href='/admin') Admin 
+    page
+
+  h2 User List
+  #userList
+    table
+      thead
+        th UserName
+        th category
+        th last modify
+        th Delete?
+      tbody
+//
+  ul
+    each product in products
+      li
+        p #{product.name}
+        b #{product.year}
+        p #{product.description}
+        each image in product.images
+          div(class='l-col--6-of-12-md')
+            img(src='' + image.url)
+        

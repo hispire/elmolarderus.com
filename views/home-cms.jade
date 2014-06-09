@@ -1,0 +1,12 @@
+extends page
+block page
+  if user
+    p Logged in as: 
+      b #{user.username}
+      b #{user.role}
+      p
+        a(href='/admin/products') Products
+    a(href='/logout') Logout
+  else
+    a(href='/login') Login 
+    

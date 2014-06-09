@@ -1,0 +1,153 @@
+{
+        "productos": "productos",
+        "turismo rural": "turismo rural",
+        "producción ecológica": "producción ecológica",
+        "bodega y viñedos": "bodega y viñedos",
+        "quienes somos": "quienes somos",
+        "localización": "localización",
+        "contacto": "contacto",
+        
+        "slideshow 1": "Vino y turimso rural en la Manchuela.",
+        "slideshow 2": "Elaboramos sólo con nuestra propia cosecha.",
+        "slideshow 3": "Un antiguo caserío de labranza en la mesopotamia manchega.",
+        "slideshow 4": "Sostenibilidad, equilibrio, uso óptimo de los recursos.",
+        
+	"bienvenido": "Bienvenido!",
+	"bienvenido2": "El Molar es una finca de agroturismo situada en Fuentealbilla, Albacete.",
+	"bienvenido3": "En esta página puedes comprar <strong>nuestros productos</strong>, reservar una <strong>estancia en la finca</strong> e informarte sobre nuestra <strong>producción ecológica</strong>.",
+	
+	"titulo productos": "Nuestros productos",
+	"vinos": "Vinos",
+	"vinos 1": "Tintos ecológicos de la Denominación de OrigenManchuela.",
+	"vinos 2": "Elaboramos sólo con uvas propias, de variedades internacionales como Merlot, Cabernet Sauvignon y Syrah, y también variedades propias de la región como son Graciano y Moravia Son vinos de personalidad propia que destacan por su mineralidad.",
+	
+	"aceite": "Aceite",
+	"aceite 1": "Aceite de oliva virgen extra de primera extracción. Caracterizado por su gusto dulce y aromas a limón y hierbas.",
+	
+	"producto": "Producto",
+	"notas de cata": "Notas de cata",
+	
+	"pedir productos": "Hacer un pedido",
+	
+	"ven a visitarnos": "Ven a visitarnos",
+	
+	"la casa rural": "La casa rural",
+	
+	"casa 1": "Cuenta con seis habitaciones, tres de ellas dobles, y tres de matrimonio. Todas ellas con baño propio.",
+	"casa 2": "<strong>Abierto todo el año.</strong> Capacidad: 12 personas. Alquiler casa completa.",
+	
+	"tabla 1.1": "Fin de semana normal",
+	"tabla 1.2": "250 €",
+	"tabla 1.3": "noche",
+	"tabla 1.4": "12 personas",
+	
+	"tabla 2.1": "Puente",
+	"tabla 2.2": "300 €",
+	"tabla 2.3": "noche",
+	"tabla 2.4": "12 personas",
+	
+	"tabla 3.1": "Semana completa",
+	"tabla 3.2": "1200 €",
+	"tabla 3.3": "toda la semana",
+	"tabla 3.4": "12 personas",
+	
+	"patio": "Patio",
+	"ventana al patio": "Ventana al patio",
+	"entrada": "Entrada",
+	"comedor": "Comedor",
+	"habitacion matrimonio": "Habitación de matrimonio",
+	"habitacion doble": "Habitación doble",
+	"billar": "Billar",
+	"piscina": "Piscina",
+	
+	"entorno": "El entorno",
+	"entorno 1": "Está situada en una zona de gran belleza, entre Fuentealbilla y Abengibre, totalmente aislada del núcleo urbano. El arroyo El Galayo atraviesa la finca formando pendientes y laderas donde se encuentran plantadas las viñas. Hay varios embalses con patos y una zona con caballos, avestruces, cabras, burros...",
+	
+	"actividades": "Actividades",
+	"actividades 1": "El Molar es un buen sitio para practicar senderismo y actividades deportivas como la caza, la pesca o el tiro al plato. Además podrás realizar visitar localidades cercanas como Alcalá del Júcar, Jorquera y las Hoces del Cabriel de gran interés cultural.",
+	
+	"manchuela": "La manchuela",
+	"manchuela 1": "La mesopotamia manchega es una comarca entre Albacete y Cuenca, surcada por los ríos Júcar y Cabriel. Llena de contrastes, seduce al viajero por su riqueza paisajística y cultural. Las civilizaciones que la habitaron, íberos, árabes, romanos... dejaron sus huellas en iglesias, castillos y murallas.",
+	
+	"consultar disponibilidad": "Consultar disponibilidad",
+	
+	"sin quimicos": "Sin químicos",
+	"quimicos 1": "Así evitamos la contaminación de la vida acuática y efectos adversos sobre el suelo. Las malas hierbas son cortadas en lugar de emplear herbicidas.",
+	
+	"abonos organicos": "Abonos orgánicos",
+	"abonos 1": "Previenen la erosión del suelo y mejoran su estructura.",
+	
+	"biodiversidad": "Biodiversidad",
+	"biodiversidad 1": "Plantamos árboles, conservamos los prados, protegemos la vegetación autóctona.",
+	
+	"elaboracion natural": "Elaboración natural",
+	"elaboracion 1": "Utilizamos levaduras naturales durante la fermentación y clara de huevo o gelatina durante la clarificación del vino.",
+	
+	"bienestar animal": "Bienestar animal",
+	"bienestar 1": "El cuidado y pastoreo de animales se realiza en campo abierto.",
+	
+	"ecologico 2": "Somos <strong>productores ecológicos</strong> acreditados por <abbr>certifood</abbr> Hemos creado en la finca un agrosistema sostenible desde el punto de vista social, ecológico y económico.",
+	
+	"descarga nuestro certificado": "Descarga nuestro certificado",
+	
+	"nuestros vinedos": "Nuestros viñedos",
+	"nuestros vinedos 1": "Las condiciones naturales garantizan la extraordinaria calidad de nuestros vinos.",
+	
+	"el terreno": "El terreno",
+	"terreno 1": "Situados a una altitud de entre 650 y 750 metros nuestros viñedos son cultivados en suelos pedregosos y calizo calcáreos aportando al vino su remarcable mineralidad.",
+	
+	"el clima": "El clima",
+	"clima 1": "El clima continental, así como la brisa mediterránea favorecen una maduración lenta y la perfecta formación de polifenoles. El régimen de lluvias y la cantidad de horas de sol durante el periodo de maduración reducen al mínimo el riesgo de enfermedades.",
+	
+	"asi hacemos el vino": "Así hacemos el vino",
+	"hacemos el vino 1": "La elaboración se realiza con granos completos sin prensa previa.",
+	
+	"maceracion": "Maceración",
+	"maceracion 1": "Es controlada con bajas temperaturas y remontes para obtener el color y los aromas de los hollejos.",
+	
+	"fermentacion": "Fermentación",
+	"fermentacion 1": "Se realiza con levaduras naturales y controlando la temperatura.",
+	
+	"prensado": "Prensado",
+	"prensado 1": "A través de tradicionales prensas verticales se separa el vino de prensa del de lágrima, garantizando productos de calidad.",
+	
+	"crianza": "Crianza",
+	"crianza 1": "Nuestra sala de crianza tiene barricas de roble francés y americano.",
+	"crianza 2": "El vino tiene una crianza de dos a doce meses en barrica, con un posterior periodo de descanso en botella antes de su puesta en el mercado.",
+	
+	"quienes somos": "Quienes somos",
+	"quienes somos cita": "La tercera generación de viticultores",
+	"acerca de mi": "Acerca de mí",
+	"acerca de mi 1": "Durante varias generaciones mi familia ha tenido contacto directo con las viñas y el vino. Mi abuelo y mi padre fueron viticultores. Junto a ellos he vivido los procesos de modernización de la producción. Mi principal aportación ha sido orientarla hacia el vino de calidad.", 
+          "acerca de mi 2": "A principios de mi carrera fui requerido para relanzar una bodega situada en La Rioja. Por muchos años he trabajado como asesor para varias bodegas de la zona.",
+	
+	"mi proyecto": "Mi proyecto",
+	"mi proyecto 1": "En 1998 durante una visita a La Manchuela conocí la Finca El Molar, me pareció el lugar ideal para el cultivo del viñedo. Ahora cuenta con 29 hectáreas de viña de cinco variedades distintas y 65 hectáreas de olivos.",
+	"mi proyecto 2": "Disponemos de una modesta bodega con capacidad para elaborar hasta 300.000 litros de vino. En la actualidad estamos estudiando ampliar el viñedo en 12 hectáreas pero aún no tenemos definidas las variedades.",
+	
+	"propietario": "Propietario",
+	
+	"localizacion": "Localización",
+	"introduce tu ubicacion": "Introduce tu ubicación",
+	"como llegar": "Como llegar",
+	
+	"podemos ayudarte": "¿Podemos ayudarte?",
+	"nombre": "Nombre",
+	"correo electronico": "Correo electrónico",
+	"cuentanos que necesitas": "Cuéntanos qué necesitas",
+	"contacto 1": "Pide tus productos, reserva habitación o cualquier otro asunto",
+	"asunto": "Asunto:",
+	"otro asunto": "Otro asunto",
+	"mensaje": "Mensaje:",
+	"enviar": "Enviar",
+	"info rus": "Casa rural, vino, aceite:",
+	"nombre rus": "Rus Jiménez Moya",
+	"telefono rus": "+34 647 075 371",
+	"email rus": "info@elmolarderus.com",
+	"facebook el molar": "Finca El Molar de Rus",
+	
+	"info mariano": "Coto de caza, campo de tiro:",
+	"nombre mariano": "Mariano Muñoz Lozano",
+	"telefono mariano": "+34 609 659 080"	
+	
+}	

@@ -1,0 +1,16 @@
+extends page
+block page
+  if error
+    p There was an error signing up: #{error}
+  form(action='/signup' method='post')
+    input(type='hidden', name='_csrf', value="#{csrf}")
+    Username: input(type='text' name='username')
+    Password: input(type='password' name='password')
+    Password confirmation: 
+    input(type='password' name='password_confirmation')
+    label(for='role') Role:
+    select(name='role')
+      - each role in roles
+        option(value='' + role.id + '') #{role.name}
+
+    button(type='submit') Sign up

@@ -1,0 +1,44 @@
+extends page
+block page
+  ul#productList
+    each product in products
+      li(class='l')
+        p #{product.name}
+        b #{product.year}
+        p #{product.description}
+        each note in product.notes
+          h3 Color
+          p #{note.color}
+          h3 Aroma
+          p #{note.aroma}
+          h3 Boca
+          p #{note.mouth}
+        each image in product.images
+          div(class='l-col--6-of-12-md')
+            img(src='' + image.url)
+        a(href='#' class='linkdeleteproduct' rel='' + product._id + '') delete
+        
+  h2 Add Product
+  - if (messages.valErrors)
+    - each err in messages.valErrors
+      p #{err.msg}
+  #addProduct
+    form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
+      - if(messages.dataForm)
+        input#inputProductName(type='text', name='name', placeholder='Name', value=messages.dataForm[0].name)
+        input#inputProductYear(type='text', name='year', placeholder='Year', value=messages.dataForm[0].year)
+        textarea#inputProductDescription(type='text', name='description', placeholder='Description', value=messages.dataForm[0].description)
+      - else
+        input#inputProductName(type='text', name='name', placeholder='Name')
+        input#inputProductYear(type='text', name='year', placeholder='Year')
+        label(for='color') Color:
+        input#inputProductYear(type='text', name='color', placeholder='Color')
+        label(for='color') Aroma:
+        input#inputProductYear(type='text', name='aroma', placeholder='Aroma')
+        label(for='color') Boca:
+        input#inputProductYear(type='text', name='mouth', placeholder='Boca')
+        br
+        textarea#inputProductDescription(type='text', name='description', placeholder='Description')
+      input#inputProductImage(type='file' name="file")
+      input(type="submit" value="Add product")
+      //button#btnAddProduct Add User

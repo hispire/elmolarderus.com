@@ -1,0 +1,153 @@
+{
+        "productos": "products",
+        "turismo rural": "rural tourism",
+        "producción ecológica": " Ecological Production",
+        "bodega y viñedos": "winery and vineyards",
+        "quienes somos": "about us",
+        "localización": "location",
+        "contacto": "contact",
+                
+        "slideshow 1": "Wine and rural tourism in La Manchuela.",
+        "slideshow 2": "Prepared from our very own harvest (vintage).",
+        "slideshow 3": "A former country farming house in the Manchegan Mesopotamia.",
+        "slideshow 4": "Sustainability, harmony and optimum use of resources.",
+        
+	"bienvenido": "Welcome!",
+	"bienvenido2": "El Molar is a rural tourism farm located in Fuentealbilla, Albacete (Spain)",
+	"bienvenido3": "On our website you can make a request to purchase <strong>our products</strong>, check availability to <strong>stay on the farm</strong> and learn about our <strong>ecological production</strong>",
+	
+	"titulo productos": "Our products",
+	"vinos": "Wines",
+	"vinos 1": "PDO (Protected Denomination of Origin) organic red wines from La Manchulea.",
+	"vinos 2": "Produced from our own grapes, which include international varieties such as Merlot, Cabernet  Sauvignon and Syrah, as well as regional varieties such as Graciano and Moravia. They are unique wines distinguished by their minerality",
+	
+	"aceite": "Olive Oil",
+	"aceite 1": "First extraction extra virgin olive oil, characterized by its sweet taste and lemon and herb aroma.",
+	
+	"producto": "Product",
+	"notas de cata": "Tasting Notes",
+	
+	"pedir productos": "Make a request",
+	
+	"ven a visitarnos": "Come and visit us",
+	
+	"la casa rural": "The country house",
+	
+	"casa 1": "There are six bedrooms, three of which are doubles and three with Queen size beds. Each has its own bathroom.",
+	"casa 2": "<strong>Open all year around.</strong> Capacity 12 people. Must rent the entire house.",
+	
+	"tabla 1.1": "Regular Weekend",
+	"tabla 1.2": "250 €",
+	"tabla 1.3": "per night",
+	"tabla 1.4": "12 people",
+	
+	"tabla 2.1": "Holiday weekend",
+	"tabla 2.2": "300 €",
+	"tabla 2.3": "per night",
+	"tabla 2.4": "12 people",
+	
+	"tabla 3.1": "Full week",
+	"tabla 3.2": "1200 €",
+	"tabla 3.3": "for the week",
+	"tabla 3.4": "12 people",
+	
+	"patio": "Patio",
+	"ventana al patio": "Patio view",
+	"entrada": "Entrance",
+	"comedor": "Dinning room",
+	"habitacion matrimonio": "Bedroom queen bed",
+	"habitacion doble": "Double room",
+	"billar": "Pool table",
+	"piscina": "Swimming pool",
+	
+	"entorno": "The area",
+	"entorno 1": "We are in a beautiful location between Fuentealbilla and Abengibre, totally isolated from the city center. The brook El Galayo runs through the farm, forming slopes and hillsides to where the vineyard is located. There are various reservoirs with ducks and an area for the horses, ostriches, goats, donkeys...",
+	
+	"actividades": "Activities",
+	"actividades 1": "El Molar is a great place to hike and  enjoy other outdoor activities like   hunting, fishing and skeet shooting. You can also visit nearby cultural places of interest such as Alcala del Jucar, Jorquera and las Hoces del Cabriel.",
+	
+	"manchuela": "La Manchuela",
+	"manchuela 1": "The Manchegan Mesopotamia is a region between Albacete and Cuenca, surrounded by the Jucar river and the Cabriel river. Full of contrast, seducing the traveler with its rich and cultural landscape. The civilizations that inhabited the land, Iberians, Arabians and Romans, have left their mark in the churches, castles and walls.",
+	
+	"consultar disponibilidad": "Check availability",
+	
+	"sin quimicos": "Chemical Free",
+	"quimicos 1": "We eliminate the contamination in the water life and the adverse effects in the soil. The weeds are removed by hand instead of using weed-killer.",
+	
+	"abonos organicos": "Organic fertilizer",
+	"abonos 1": "This fertilizer prevents the erosion of the ground and improves its foundation.",
+	
+	"biodiversidad": "Biodiversity",
+	"biodiversidad 1": "We plant trees, we preserve the land and we protect the native vegetation.",
+	
+	"elaboracion natural": "Natural production",
+	"elaboracion 1": "We use natural yeast during the fermenting process and egg whites or gelatin during the wine filtering.",
+	
+	"bienestar animal": "Animal well-being",
+	"bienestar 1": "The care and shepherding of the animal is done in an open field.",
+	
+	"ecologico 2": "We are <strong>ecological producers</strong> accredited by <abbr>CERTIFOOD</abbr>. On the farm we have created a sustainable agricultural ecosystem from a social, ecological and economical perspective.",
+	
+	"descarga nuestro certificado": "Download our certificate",
+	
+	"nuestros vinedos": "Our vineyards",
+	"nuestros vinedos 1": "The natural conditions guarantee the excellent quality of our wines.",
+	
+	"el terreno": "The land",
+	"terreno 1": "With an altitude of 650 and 750 meters, our vineyards are cultivated on a rocky calcareous ground, providing the wine with its remarkable minerality.",
+	
+	"el clima": "The climate",
+	"clima 1": "The continental climate and its Mediterranean breeze boost a slow ripening process and the perfect formation of polyphenols. The balance of rain and sun during the ripening process minimize the risk of plant diseases.",
+	
+	"asi hacemos el vino": "How the wine is made",
+	"hacemos el vino 1": "The production is done with whole grains before pressing them.",
+	
+	"maceracion": "Maceration",
+	"maceracion 1": "This part of the process is monitored in low temperatures and mechanically rotated to extract the color and aroma from the grape's skin.",
+	
+	"fermentacion": "Fermentation",
+	"fermentacion 1": "Our wines are made with natural yeasts and with monitored temperatures.",
+	
+	"prensado": "Pressing",
+	"prensado 1": "Through traditional vertical pressing machines, the “free run” wine is separated from the press wine, guaranteeing the best quality.",
+	
+	"crianza": "Aging",
+	"crianza 1": "Our wine aging room has French and American oak barrels.",
+	"crianza 2": "The wine is aged between two and twelve months in the barrel, then rests in the bottle before sold in the market.",
+	
+	"quienes somos": "About Us",
+	"quienes somos cita": "Third generation of viticulturists",
+	"acerca de mi": "About Me",
+	"acerca de mi 1": "My family has been directly involved with the vineyards and wine making process for many generations. My grandfather and my father were vine growers; with them I saw the modernization of the production processes. My ultimate goal was to manufacture the best quality wine.", 
+        "acerca de mi 2": "I was first asked to relaunch a winery located in La Rioja. For many years I have worked as a consultant for various wineries in the area.",
+	
+	"mi proyecto": "My Project",
+	"mi proyecto 1": "In 1998, during a visit to La Manchuela, I first encountered la Finca El Molar. I thought it was an ideal place to cultivate the vineyards. Now we have 29 hectares of vineyard of five different varieties and 65 hectares of olive trees.",
+	"mi proyecto 2": "We have a modest winery with the capacity to produce up to 300,000 liters of wine. Currently we are looking to expand our vineyard by 12 hectares and are still thinking about the new varieties we can include.",
+	
+	"propietario": "Owner",
+	
+	"localizacion": "Location",
+	"introduce tu ubicacion": "Enter your current location",
+	"como llegar": "Directions",
+	
+	"podemos ayudarte": "How can we help you?",
+	"nombre": "Name",
+	"correo electronico": "Email",
+	"cuentanos que necesitas": "Let us know what you need",
+	"contacto 1": "Make a request, check availability or any other subject",
+	"asunto": "Subject:",
+	"otro asunto": "Other subject",
+	"mensaje": "Message:",
+	"enviar": "Send",
+	"info rus": "Rural tourism, wine and olive oil:",
+	"nombre rus": "Rus Jiménez Moya",
+	"telefono rus": "+34 647 075 371",
+	"email rus": "info@elmolarderus.com",
+	"facebook el molar": "Finca El Molar de Rus",
+	
+	"info mariano": "Hunting ground and firing range:",
+	"nombre mariano": "Mariano Muñoz Lozano",
+	"telefono mariano": "+34 609 659 080"	
+	
+}

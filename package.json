@@ -1,0 +1,27 @@
+{
+  "name": "elmolar-cms",
+  "version": "0.0.1",
+  "description": "A Node.js CMS using express and mongodb",
+  "dependencies": {
+    "body-parser": "~1.0.2",
+    "connect-mongo": "git+https://github.com/kcbanner/connect-mongo.git#master",
+    "connect-multiparty": "^1.0.4",
+    "cookie-parser": "~1.0.1",
+    "csurf": "^1.1.0",
+    "express": "~4.0.0",
+    "express-error-handler": "^0.5.4",
+    "express-flash": "0.0.2",
+    "express-session": "~1.0.3",
+    "express-validator": "^2.1.2",
+    "express3-handlebars": "~0.5.0",
+    "i18n": "^0.4.1",
+    "jade": "*",
+    "mongodb": "~1.4.2",
+    "mongoose": "^3.8.9",
+    "nconf": "^0.6.9",
+    "nodemailer": "~0.6.3",
+    "stylus": "*",
+    "winston": "^0.7.3"
+  },
+  "engine": "node >=0.6.x"
+}

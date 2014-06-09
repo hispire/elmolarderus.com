@@ -1,0 +1,97 @@
+section.l-col--12-of-12.background__color--neutral-soft.bg__texture--noise.spacer__padding-right--size-small.spacer__padding-left--size-small.spacer__padding-top--size-xxlarge.spacer__padding-bottom--size-xxlarge
+  //h2.l-self--align-right Ven a visitarnos
+  article(class=blocks['text-area--primary'])
+    div.spacer__margin-bottom--size-large
+      h3= __("ven a visitarnos")
+      h4= __("la casa rural")
+      p= __("casa 1")
+      p!= __("casa 2")
+    div(class=blocks['table__container'])
+      table(class=blocks['table']) 
+        thead(class=blocks['table__head'])
+          tr
+            th(class=blocks['table__col'])= __("tabla 1.1")
+        tbody(class=blocks['table__body'])
+          tr
+            td(class=blocks['table__col'])= __("tabla 1.2")
+              span.l-self--dsp-col= __("tabla 1.3")
+              p= __("tabla 1.4")
+
+    div(class=blocks['table__container'])
+      table(class=blocks['table'])   
+        thead(class=blocks['table__head'])
+          tr
+            th(class=blocks['table__col'])= __("tabla 2.1")
+        tbody(class=blocks['table__body'])
+          tr
+            td(class=blocks['table__col'])= __("tabla 2.2")
+              span.l-self--dsp-col= __("tabla 2.3")
+              p= __("tabla 2.4")
+            
+    div(class=blocks['table__container'])
+      table(class=blocks['table'])   
+        thead(class=blocks['table__head'])
+          tr
+            th(class=blocks['table__col'])= __("tabla 3.1")
+        tbody(class=blocks['table__body'])
+          tr
+            td(class=blocks['table__col'])= __("tabla 3.2")
+              span.l-self--dsp-col= __("tabla 3.3")
+              p= __("tabla 3.4")
+    ul.gallery__container(class=blocks['gallery--polaroid'])
+      li(class=blocks['gallery__item'])
+        a(href='/images/patio.jpg' title=__("patio"))
+          img(src='/images/patio.jpg' alt='Patio')
+      li(class=blocks['gallery__item'])
+        a(href='/images/patio2.jpg' title=__("ventana al patio"))
+          img(src='/images/patio2.jpg' alt='Ventana al patio')
+      li(class=blocks['gallery__item'])
+        a(href='/images/entrada.jpg' title=__("entrada"))
+          img(src='/images/entrada.jpg' alt='Entrada')
+      li.l--last-md(class=blocks['gallery__item'])
+        a(href='/images/comedor.jpg' title=__("comedor"))
+          img(src='/images/comedor.jpg' alt='Comedor')
+      li(class=blocks['gallery__item'])
+        a(href='/images/hab-matri.jpg' title=__("habitacion matrimonio"))
+          img(src='/images/hab-matri.jpg' alt='Habitacion de matrimonio')
+      li(class=blocks['gallery__item'])
+        a(href='/images/hab-doble.jpg' title=__("habitacion doble"))
+          img(src='/images/hab-doble.jpg' alt='Habitacion doble')
+      li(class=blocks['gallery__item'])
+        a(href='/images/billar.jpg' title=__("billar"))
+          img(src='/images/billar.jpg' alt='Billar')
+      li.l--last-md(class=blocks['gallery__item'])
+        a(href='/images/piscina.jpg' title=__("piscina"))
+          img(src='/images/piscina.jpg' alt='Piscina')
+
+
+
+      
+  article.l.l-col--4-of-12-md(class=blocks['text-area--primary'])
+    div.l.l-col--4-of-12.l--align-center
+      img(class=blocks['item--circle-shadow'] src='/images/entorno.jpg' alt="Foto entorno")
+    div
+      h4=__("entorno")
+      p=__("entorno 1")
+    
+  article.l.l-col--4-of-12-md(class=blocks['text-area--primary'])
+    div.l.l-col--4-of-12.l--align-center
+      img(class=blocks['item--circle-shadow'] src='/images/actividades.jpg' alt="Foto actividades")
+    div
+      h4=__("actividades")
+      p=__("actividades 1")
+    
+  article.l.l-col--4-of-12-md.l--last-md(class=blocks['text-area--primary'])
+    div.l.l-col--4-of-12.l--align-center
+      img(class=blocks['item--circle-shadow'] src='/images/manchuela.jpg' alt="Foto manchuela")
+    div
+      h4=__("manchuela")
+      p=__("manchuela 1")
+  div(class=blocks['text-area--primary'])
+    a(href="#contact")
+      div.background__color--primary-default(class=blocks['container--rounded-xpadded'])
+        p 
+          span(aria-hidden="true" data-icon!="&#xe600;")   
+          span=__("consultar disponibilidad")
+
+  div(id="ecologic") 

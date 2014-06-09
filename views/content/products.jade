@@ -1,0 +1,69 @@
+section.l--align-center.separator--style-halfcircle.l-col--12-of-12.background__color--secondary-default.bg__texture--noise.spacer__padding-right--size-small.spacer__padding-left--size-small.spacer__padding-top--size-xxlarge.spacer__padding-bottom--size-xxlarge
+  //h2.l-self--align-right Productos
+  
+  article(class=blocks['text-area--secondary'])
+    div.l.l-col--8-of-12-sm.l--last-sm(class=blocks['text-area--secondary'])
+      h3= __("titulo productos")
+      div.spacer__margin-bottom--size-large
+        h4= __("vinos")
+        p= __("vinos 1")
+        p= __("vinos 2")
+      div.spacer__margin-bottom--size-xxxlarge
+        h4= __("aceite")
+        p= __("aceite 1")
+    ul.list--no-style.l--align-center
+      - var i = 0;
+      - var nProducts = 1;
+      each product in products
+        -if (nProducts != 0 && nProducts % 4 == 0)
+          - var last = 'l--last-md'
+        - else
+          - var last = ''
+        li.tabs(class=blocks['catalog__item'] class=last)
+          article.tab(class=blocks['text-area--secondary'])
+            input(type="radio" id="tab" + (i + 1) name="tab-group-" + (i + 1) checked)
+            label.tab__label(for="tab" + (i + 1))= __("producto")
+            div.tab__content(id="tab__content" + (i + 1))
+              div.l.l-col--6-of-12.l--last
+                each image in product.images
+                  img(src='' + image.url alt="Vino quantum blend")
+              div(class=blocks['figure__info'])
+                h4 #{product.name} 
+                  //span.text--xlarge Blend 
+                  span #{product.year}
+                p #{product.description}
+          - if(product.notes.length != 0)
+            arcticle.tab
+              input(type="radio" id="tab" + (i + 2) name="tab-group-" + (i + 1))
+              label.tab__label.tab__label-2(for="tab" + (i + 2))= __("notas de cata")
+              div.tab__content.tab__content-2(id="tab__content" + (i + 2))
+                div(class=blocks['content__features']).l--align-center
+                  ul.list--no-style.l.l-col--10-of-12
+                    each note in product.notes
+                      if (note.color)
+                        li
+                          h5 
+                            span(aria-hidden="true" data-icon!="&#xe610;")   
+                            | Colores
+                          p #{note.color}
+                      if (note.aroma)
+                        li
+                          h5
+                            span(aria-hidden="true" data-icon!="&#xe60d;")
+                            | Aroma
+                          p #{note.aroma}
+                      if (note.mouth)
+                        li
+                          h5 
+                            span(aria-hidden="true" data-icon!="&#xe60e;")
+                            | Boca
+                          p #{note.mouth}
+        - i += 2;
+        - nProducts += 1;
+    a(href="#contact")
+      div.background__color--neutral-soft(class=blocks['container--rounded-xpadded'])
+        p 
+          span(aria-hidden="true" data-icon!="&#xe601;")  
+          span= __("pedir productos")
+  
+  div(id="tourism") 
