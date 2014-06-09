@@ -4,6 +4,6 @@
         "tokenLife" : 3600
     },
     "mongoose": {
-        "uri": "mongodb://giorgix:DaVinci@ds031978.mongolab.com:31978/elmolar"
+        "uri": "mongodb://giorgix:pass@ds031978.mongolab.com:31978/elmolar"
     }
 } 
