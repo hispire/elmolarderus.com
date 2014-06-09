@@ -26,7 +26,7 @@ block page
               div.tab__content(id="tab__content" + (i + 1))
                 div.l.l-col--6-of-12.l--last
                   each image in product.images
-                    img(src='' + image.url alt="Vino quantum blend")
+                    img(src='' + image.url alt='image' + product.name)
                 div(class=blocks['figure__info'])
                   h4 #{product.name} 
                     //span.text--xlarge Blend 
@@ -58,7 +58,16 @@ block page
                               span(aria-hidden="true" data-icon!="&#xe60e;")
                               | Boca
                             p #{note.mouth}
-            a(href='#' class='linkdeleteproduct' rel='' + product._id + '') delete
+            div.l.l-col--5-of-12
+              a(href='#' class='linkdeleteproduct' rel='' + product._id + '')
+                div.l.spacer__margin-bottom--size-large.background__color--neutral-soft(class=blocks['button--rounded'])
+                  span.background__color--neutral-soft(class=blocks['icon--left'] aria-hidden="true" data-icon!="&#xe624;")
+                  span Delete
+            div.l.l-col--5-of-12.l-self--align-right
+              a(href='/admin/products/' + product._id)
+                div.l.spacer__margin-bottom--size-large.background__color--neutral-soft(class=blocks['button--rounded'])
+                  span.background__color--neutral-soft(class=blocks['icon--left'] aria-hidden="true" data-icon!="&#xe623;")
+                  span Edit
           - i += 2;
           - nProducts += 1;
 
@@ -68,7 +77,7 @@ block page
         - each err in messages.valErrors
           p #{err.msg}
       #addProduct
-        div.l.l-col--12-of-12.l-col--7-of-12-sm    
+        div.l.l-col--11-of-12.l-col--7-of-12-sm.l--last.l--last-sm    
           form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
             - if(messages.dataForm)
               input.l-col--12-of-12#inputProductName(type='text', name='name', placeholder='Name', value=messages.dataForm[0].name)
@@ -82,7 +91,7 @@ block page
                 label(for='year') Año:
               input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='year', placeholder='Year')
               div
-                label(for='description') Descripcion del producto:
+                label(for='description') Descripcion (ingredientes):
               textarea.l-col--12-of-12#inputProductDescription(class=blocks['form__input--rounded'] type='text', name='description', placeholder='Description' required)
 
               h4 Notas de cata
@@ -95,7 +104,9 @@ block page
               div
                 label(for='color') Boca:
               input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca')
-            input#inputProductImage(class=blocks['form__input--rounded'] type='file' name="file")
+            div
+              label(for='file') Imagen:
+            input.l-col--12-of-12#inputProductImage(class=blocks['form__input--rounded'] type='file' name="file")
             div
               input.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] id="submit" type="submit" value="Add product")
               //button#btnAddProduct Add User

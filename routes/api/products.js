@@ -3,7 +3,8 @@ var router = express.Router();
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({uploadDir:'./public/images'});
 var requireUser = require('../.././js/cms-helpers').requireUser;
-var renameFile = require('../.././js/cms-helpers').renameFile
+var renameFile = require('../.././js/cms-helpers').renameFile;
+var deleteFile = require('../.././js/cms-helpers').deleteFile;
 var ProductModel = require('../.././js/mongoose').ProductModel; 
 var flash = require('express-flash');
 var expressValidator = require('express-validator');
@@ -26,13 +27,62 @@ router.route('/')
 
 })
 .post(requireUser("admin"), multipartMiddleware, function(req, res) {
+    // get the temporary location of the file
+    var tmp_path = req.files.file.path;
+    if(req.body._method === 'put') {
+      return ProductModel.findById(req.body.product_id, function(err, product) {
+	var notes = [];
+	if(req.body.color, req.body.aroma, req.body.mouth) {
+	  notes = [{color: req.body.color, aroma: req.body.aroma, mouth: req.body.mouth}]; 
+	}
+	if(req.files.file.originalFilename != '') {
+	  deleteFile('./public' + product.images[0].url);
+          var target_path = './public/images/' + req.files.file.name;
+          var url_img = '/images/' + req.files.file.name;
+          // move the file from the temporary location to the intended location
+          renameFile(tmp_path, target_path, function(err, msg) {
+            if (err) {
+              res.locals.err = 'An error ocurred! Sorry try again' + err;
+              res.redirect('/admin/products');      
+            } else {
+	      product.images = [{kind: "detail", url: url_img}];
+	      product.name = req.body.name,
+	      product.year = req.body.year,
+	      product.description = req.body.description,
+	      product.notes = notes;
+	      product.save(function(err,product){
+	        if (err) {
+                  console.log(err);
+	          return res.send(err);
+	        } else {
+	          res.redirect('/admin/products');
+	          }
+              })
+	    }
+	  })
+	} else {
+	  // delete tmp images if there is an error validating the form
+          deleteFile(tmp_path);
+	  product.name = req.body.name,
+	  product.year = req.body.year,
+	  product.description = req.body.description,
+	  product.notes = notes;
+	  product.save(function(err,product){
+	    if (err) {
+              console.log(err);
+	      return res.send(err);
+	    } else {
+	      res.redirect('/admin/products');
+	      }
+          })
+	}
+      })
+    } else {
     req.assert('name', 'Nombre obligatorio').notEmpty();
     req.assert('description', 'Por favor escribe un mensaje').len(5, 1000);
     var valErrors = req.validationErrors();
     var dataForm = {};
-    
-    // get the temporary location of the file
-    var tmp_path = req.files.file.path;
+ 
     // check if the filename is empty so the user didn't upload an image 
     if(req.files.file.originalFilename === '') {
       if(valErrors){  
@@ -44,14 +94,12 @@ router.route('/')
     if(valErrors) {
       
       // delete tmp images if there is an error validating the form
-      fs.unlink(tmp_path, function(err) {
-        if(err) throw err;
-      });
-    dataForm.name = req.body.name;
-    dataForm.year = req.body.year;
-    dataForm.description = req.body.description;
-    req.flash('dataForm', dataForm);
-    req.flash('valErrors', valErrors);
+      deleteFile(tmp_path);
+      dataForm.name = req.body.name;
+      dataForm.year = req.body.year;
+      dataForm.description = req.body.description;
+      req.flash('dataForm', dataForm);
+      req.flash('valErrors', valErrors);
     res.redirect('/admin/products');
     } else {
       
@@ -109,7 +157,24 @@ router.route('/')
       } 
     });
   }
+    }
 })
+
+router.get('/:id', requireUser("admin"), function(req, res) {
+  return ProductModel.findById(req.params.id, function(err, product) {
+    if(!product) {
+      console.log('no product with taht id');
+      return res.send('No product with that id');
+    }
+    if(err) {
+      return console.log(err);
+    }
+    res.locals.product = product;
+    //res.send(products);
+    res.render('product');
+  }); 
+})
+
 router.delete('/:id', requireUser("admin"), function(req, res) {
   return ProductModel.findById(req.params.id, function(err, product) {
     if(!product) {

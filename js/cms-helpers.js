@@ -74,7 +74,14 @@ var renameFile  = function(tmp_path, target_path, callback){
     });
 }
 
+var deleteFile = function(path) {
+  fs.unlink(path, function(err) {
+    if(err) throw err;
+  });
+}
+
 module.exports.requireUser = requireUser;
 module.exports.getRoles = getRoles;
 module.exports.checkIfLoggedIn = checkIfLoggedIn;
 module.exports.renameFile = renameFile;
+module.exports.deleteFile = deleteFile;

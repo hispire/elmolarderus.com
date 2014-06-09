@@ -17,7 +17,7 @@ function checkResponse( response ) {
 function deleteData(url, id) {
 
     // Pop up a confirmation dialog
-    var confirmation = confirm('Are you sure you want to delete this user?');
+    var confirmation = confirm('Are you sure you want to delete this item?');
     
     // Check and make sure the user confirmed
     if (confirmation === true) {

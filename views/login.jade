@@ -3,8 +3,9 @@ block page
   section.l-col--12-of-12.spacer__padding-right--size-small.spacer__padding-left--size-small.spacer__padding-top--size-xxlarge.spacer__padding-bottom--size-xxlarge
     article.l.l-col--12-of-12.spacer__padding-top--size-large.l--align-center(class=blocks['text-area--neutral'])
       if badCredentials
-        div.foreground--error(class=blocks['container--rounded-flash'])
-          p The login information you entered is not correct
+        div
+          div.l.l-col--12-of-12.l-col--4-of-12-sm(class=blocks['container--rounded-error'])
+            p The login information you entered is not correct
       div.l.l-col--12-of-12.l-col--4-of-12-sm    
         form(action='/admin' method='post')
           div

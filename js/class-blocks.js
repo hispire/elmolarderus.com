@@ -220,8 +220,8 @@ var blocks = {
 
 
   'container--rounded-error': [
-    'background__color--flash-alert',
-    'foreground--error',  
+    'bg__gradient--linear-red',
+    'foreground__color--neutral-soft',  
     'container__border-radius--size-small',
     'spacer__padding-bottom--size-xsmall',
     'spacer__padding-top--size-xsmall',
