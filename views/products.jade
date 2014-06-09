@@ -1,44 +1,101 @@
 extends page
 block page
-  ul#productList
-    each product in products
-      li(class='l')
-        p #{product.name}
-        b #{product.year}
-        p #{product.description}
-        each note in product.notes
-          h3 Color
-          p #{note.color}
-          h3 Aroma
-          p #{note.aroma}
-          h3 Boca
-          p #{note.mouth}
-        each image in product.images
-          div(class='l-col--6-of-12-md')
-            img(src='' + image.url)
-        a(href='#' class='linkdeleteproduct' rel='' + product._id + '') delete
-        
-  h2 Add Product
-  - if (messages.valErrors)
-    - each err in messages.valErrors
-      p #{err.msg}
-  #addProduct
-    form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
-      - if(messages.dataForm)
-        input#inputProductName(type='text', name='name', placeholder='Name', value=messages.dataForm[0].name)
-        input#inputProductYear(type='text', name='year', placeholder='Year', value=messages.dataForm[0].year)
-        textarea#inputProductDescription(type='text', name='description', placeholder='Description', value=messages.dataForm[0].description)
-      - else
-        input#inputProductName(type='text', name='name', placeholder='Name')
-        input#inputProductYear(type='text', name='year', placeholder='Year')
-        label(for='color') Color:
-        input#inputProductYear(type='text', name='color', placeholder='Color')
-        label(for='color') Aroma:
-        input#inputProductYear(type='text', name='aroma', placeholder='Aroma')
-        label(for='color') Boca:
-        input#inputProductYear(type='text', name='mouth', placeholder='Boca')
-        br
-        textarea#inputProductDescription(type='text', name='description', placeholder='Description')
-      input#inputProductImage(type='file' name="file")
-      input(type="submit" value="Add product")
-      //button#btnAddProduct Add User
+  article
+    div.l-col--12-of-12.background__color--neutral-loud.spacer__margin-bottom--size-xxlarge(class=blocks['island--small'] class=blocks['text-area--neutral-soft'])
+      div.l.l-col--7-of-12
+        if user
+          p Logged in as: 
+            b #{user.username}
+            //b #{user.role}
+      div.l.l-col--5-of-12.l--last
+        a(href="/logout")
+          button.bg__gradient--linear-red(class=blocks['form__submit--rounded'] id='submit') Logout
+    div(class=blocks['text-area--secondary'])     
+      ul.list--no-style.l--align-center(id="productList")
+        - var i = 0;
+        - var nProducts = 1;
+        each product in products
+          -if (nProducts != 0 && nProducts % 4 == 0)
+            - var last = 'l--last-md'
+          - else
+            - var last = ''
+          li.tabs(class=blocks['catalog__item'] class=last)
+            article.tab(class=blocks['text-area--secondary'])
+              input(type="radio" id="tab" + (i + 1) name="tab-group-" + (i + 1) checked)
+              label.tab__label(for="tab" + (i + 1))= __("producto")
+              div.tab__content(id="tab__content" + (i + 1))
+                div.l.l-col--6-of-12.l--last
+                  each image in product.images
+                    img(src='' + image.url alt="Vino quantum blend")
+                div(class=blocks['figure__info'])
+                  h4 #{product.name} 
+                    //span.text--xlarge Blend 
+                    span #{product.year}
+                  p #{product.description}
+            - if(product.notes.length != 0)
+              arcticle.tab
+                input(type="radio" id="tab" + (i + 2) name="tab-group-" + (i + 1))
+                label.tab__label.tab__label-2(for="tab" + (i + 2))= __("notas de cata")
+                div.tab__content.tab__content-2(id="tab__content" + (i + 2))
+                  div(class=blocks['content__features']).l--align-center
+                    ul.list--no-style.l.l-col--10-of-12
+                      each note in product.notes
+                        if (note.color)
+                          li
+                            h5 
+                              span(aria-hidden="true" data-icon!="&#xe610;")   
+                              | Colores
+                            p #{note.color}
+                        if (note.aroma)
+                          li
+                            h5
+                              span(aria-hidden="true" data-icon!="&#xe60d;")
+                              | Aroma
+                            p #{note.aroma}
+                        if (note.mouth)
+                          li
+                            h5 
+                              span(aria-hidden="true" data-icon!="&#xe60e;")
+                              | Boca
+                            p #{note.mouth}
+            a(href='#' class='linkdeleteproduct' rel='' + product._id + '') delete
+          - i += 2;
+          - nProducts += 1;
+
+    div.l.l-col--12-of-12(class=blocks['text-area--neutral'])      
+      h3 Add Product
+      - if (messages.valErrors)
+        - each err in messages.valErrors
+          p #{err.msg}
+      #addProduct
+        div.l.l-col--12-of-12.l-col--7-of-12-sm    
+          form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
+            - if(messages.dataForm)
+              input.l-col--12-of-12#inputProductName(type='text', name='name', placeholder='Name', value=messages.dataForm[0].name)
+              input#inputProductYear(type='text', name='year', placeholder='Year', value=messages.dataForm[0].year)
+              textarea#inputProductDescription(type='text', name='description', placeholder='Description', value=messages.dataForm[0].description)
+            - else
+              div
+                label(for='name') Nombre de producto:
+              input.l-col--12-of-12#inputProductName(class=blocks['form__input--rounded'] type='text', name='name', placeholder='Name' required)
+              div
+                label(for='year') Año:
+              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='year', placeholder='Year')
+              div
+                label(for='description') Descripcion del producto:
+              textarea.l-col--12-of-12#inputProductDescription(class=blocks['form__input--rounded'] type='text', name='description', placeholder='Description' required)
+
+              h4 Notas de cata
+              div
+                label(for='color') Color:
+              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color')
+              div
+                label(for='color') Aroma:
+              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma')
+              div
+                label(for='color') Boca:
+              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca')
+            input#inputProductImage(class=blocks['form__input--rounded'] type='file' name="file")
+            div
+              input.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] id="submit" type="submit" value="Add product")
+              //button#btnAddProduct Add User

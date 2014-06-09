@@ -112,6 +112,9 @@
 .bg__gradient--linear-tertiary {
   background: linear-gradient(#76b503, #5c8d03);
 }
+.bg__gradient--linear-red {
+  background: linear-gradient(#c90000, #960000);
+}
 .container__border--size-xsmall {
   border-width: 1px;
   border-style: solid;
@@ -278,11 +281,6 @@
 .foreground__color--neutral-soft nav li a:hover {
   color: #fefdff;
 }
-.foreground__color--neutral-soft input#submit {
-  color: #edeadc;
-  text-shadow: 0px 1px 0px #1e1e1e;
-  box-shadow: 0 1px 0 #465b00, inset 0 1px 0 #8db600;
-}
 .foreground__color--secondary-loud {
   color: #cf8e9a;
 }
@@ -356,6 +354,11 @@ a.link--tel {
 .foreground--success {
   color: #090;
 }
+#submit {
+  color: #edeadc;
+  text-shadow: 0px 1px 0px #1e1e1e;
+  font-weight: 400;
+}
 .foreground__text-shadow--intensity-very-soft {
   text-shadow: 0px 0px 3px;
 }
@@ -377,10 +380,10 @@ a.link--tel {
 .foreground__text-shadow--intensity-very-loud {
   text-shadow: 0px 0px 3px;
 }
-form textarea#message {
+textarea#message {
   height: 150px;
 }
-form input#submit {
+#submit {
   border: none;
 }
 @font-face {
@@ -1369,27 +1372,27 @@ a {
 .table-text p {
   font-weight: 400;
 }
-form label {
+label {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.666666666666667;
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
 }
-form input,
-form select {
+input,
+select {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.666666666666667;
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
 }
-form textarea {
+textarea {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
 }
-form input#submit {
+#submit {
   text-transform: uppercase;
   font-size: 16px;
   font-size: 1rem;

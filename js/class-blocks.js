@@ -265,8 +265,7 @@ var blocks = {
     'spacer__padding-bottom--size-xsmall',
     'spacer__padding-top--size-xsmall',
     'spacer__padding-right--size-xsmall',
-    'spacer__padding-left--size-xsmall',
-    'spacer__margin-bottom--size-large'
+    'spacer__padding-left--size-xsmall'
   ]
 
 }; 

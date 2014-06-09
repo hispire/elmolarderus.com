@@ -1,12 +1,20 @@
 extends page
 block page
-  if user
-    p Logged in as: 
-      b #{user.username}
-      b #{user.role}
-      p
-        a(href='/admin/products') Products
-    a(href='/logout') Logout
-  else
-    a(href='/login') Login 
-    
+  article(class=blocks['text-area--neutral-soft'])
+    div.l-col--12-of-12.background__color--neutral-loud.spacer__margin-bottom--size-small(class=blocks['island--small'])
+      div.l.l-col--7-of-12
+        if user
+          p Logged in as: 
+            b #{user.username}
+            //b #{user.role}
+      div.l.l-col--5-of-12.l--last
+        a(href="/logout")
+          button.bg__gradient--linear-red(class=blocks['form__submit--rounded'] id='submit') Logout
+        
+    div.l.l-col--11-of-12.l--last(class=blocks['text-area--neutral'])
+      div.l.l-col--12-of-12
+        a(href='/admin/products')
+          div.l.spacer__margin-bottom--size-large.background__color--neutral-mod-soft(class=blocks['button--rounded'])
+            span.background__color--neutral-mod-soft(class=blocks['icon--left'] aria-hidden="true" data-icon!="&#xe607;")
+            span Productos
+ 

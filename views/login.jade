@@ -1,11 +1,20 @@
 extends page
 block page
-  if badCredentials
-    p The login information you entered is not correct
+  section.l-col--12-of-12.spacer__padding-right--size-small.spacer__padding-left--size-small.spacer__padding-top--size-xxlarge.spacer__padding-bottom--size-xxlarge
+    article.l.l-col--12-of-12.spacer__padding-top--size-large.l--align-center(class=blocks['text-area--neutral'])
+      if badCredentials
+        div.foreground--error(class=blocks['container--rounded-flash'])
+          p The login information you entered is not correct
+      div.l.l-col--12-of-12.l-col--4-of-12-sm    
+        form(action='/admin' method='post')
+          div
+            input(type='hidden', name='_csrf', value="#{csrf}")
+            div
+              label(for='username') Usuario
+            input.l-col--12-of-12.l-col--12-of-12-sm(class=blocks['form__input--rounded'] type='text' name='username' placeholder='Introduce tu nombre de usuario' )
+          div
+            div
+              label(for='password') Contraseña
+            input.l-col--12-of-12.l-col--12-of-12-sm(class=blocks['form__input--rounded'] type='password' name='password' placeholder='Introduce tu contraseña')
 
-  form(action='/admin' method='post')
-    input(type='hidden', name='_csrf', value="#{csrf}")
-    Username: input(type='text' name='username')
-    Password: input(type='password' name='password')
-
-    button(type='submit') Log in
+          button.l-col--4-of-12.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] type='submit',name='submit',id='submit') Log in
