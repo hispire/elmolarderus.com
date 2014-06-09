@@ -36,6 +36,9 @@ var requireUser = function(role) {
   return function(req, res, next){
     if (req.user && req.user.role === role) {
       next();
+    } 
+    else if(!req.user) {
+      res.redirect('/admin');
     } else {
       res.status(403);
       res.render('not_allowed');
