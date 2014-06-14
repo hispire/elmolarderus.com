@@ -32,7 +32,7 @@ router.route('/')
     if(req.body._method === 'put') {
       return ProductModel.findById(req.body.product_id, function(err, product) {
 	var notes = [];
-	if(req.body.color, req.body.aroma, req.body.mouth) {
+	if(req.body.color || req.body.aroma || req.body.mouth) {
 	  notes = [{color: req.body.color, aroma: req.body.aroma, mouth: req.body.mouth}]; 
 	}
 	if(req.files.file.originalFilename != '') {
@@ -86,9 +86,9 @@ router.route('/')
     // check if the filename is empty so the user didn't upload an image 
     if(req.files.file.originalFilename === '') {
       if(valErrors){  
-        valErrors.push({param: 'file', msg: 'imagen necesaria'});
+        valErrors.push({param: 'file', msg: 'Imagen necesaria'});
       } else {
-        valErrors = {param: 'file', msg: 'imagen necesaria'};
+        valErrors = {param: 'file', msg: 'Imagen necesaria'};
       }
     }
     if(valErrors) {
@@ -98,9 +98,12 @@ router.route('/')
       dataForm.name = req.body.name;
       dataForm.year = req.body.year;
       dataForm.description = req.body.description;
+      dataForm.color = req.body.color;
+      dataForm.aroma = req.body.aroma;
+      dataForm.mouth = req.body.mouth;
       req.flash('dataForm', dataForm);
       req.flash('valErrors', valErrors);
-    res.redirect('/admin/products');
+    res.redirect('/admin/products/#addProduct');
     } else {
       
       // set where the file should actually exists - in this case it is in the "images" directory
@@ -121,7 +124,7 @@ router.route('/')
 	console.log(req.body);
 	var query = {name: req.body.name, year : req.body.year}; 
 	var notes = [];
-	if(req.body.color, req.body.aroma, req.body.mouth) {
+	if(req.body.color || req.body.aroma || req.body.mouth) {
 	  notes = [{color: req.body.color, aroma: req.body.aroma, mouth: req.body.mouth}]; 
 	}
 	var product = new ProductModel({

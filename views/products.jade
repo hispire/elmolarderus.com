@@ -71,42 +71,41 @@ block page
           - i += 2;
           - nProducts += 1;
 
-    div.l.l-col--12-of-12(class=blocks['text-area--neutral'])      
+    div.l.l-col--12-of-12(id='addProduct' class=blocks['text-area--neutral'])      
       h3 Add Product
       - if (messages.valErrors)
         - each err in messages.valErrors
-          p #{err.msg}
-      #addProduct
-        div.l.l-col--11-of-12.l-col--7-of-12-sm.l--last.l--last-sm    
-          form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
-            - if(messages.dataForm)
-              input.l-col--12-of-12#inputProductName(type='text', name='name', placeholder='Name', value=messages.dataForm[0].name)
-              input#inputProductYear(type='text', name='year', placeholder='Year', value=messages.dataForm[0].year)
-              textarea#inputProductDescription(type='text', name='description', placeholder='Description', value=messages.dataForm[0].description)
-            - else
-              div
-                label(for='name') Nombre de producto:
-              input.l-col--12-of-12#inputProductName(class=blocks['form__input--rounded'] type='text', name='name', placeholder='Name' required)
-              div
-                label(for='year') Año:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='year', placeholder='Year')
-              div
-                label(for='description') Descripcion (ingredientes):
-              textarea.l-col--12-of-12#inputProductDescription(class=blocks['form__input--rounded'] type='text', name='description', placeholder='Description' required)
+          div.l.l-col--6-of-12(class=blocks['container--rounded-error'])
+            p #{err.msg}
+      div.l.l-col--11-of-12.l-col--7-of-12-sm.l--last.l--last-sm    
+        form#productForm(action='/admin/products' method='post' enctype="multipart/form-data")
+          if messages.dataForm
+            - var fields = {name: messages.dataForm[0].name, year: messages.dataForm[0].year, description: messages.dataForm[0].description, color: messages.dataForm[0].color, aroma: messages.dataForm[0].aroma, mouth: messages.dataForm[0].mouth}
+          else
+            - var fields = {name: '', year: '', description: '', color: '', aroma: '', mouth: ''}
+          div
+            label(for='name') Nombre de producto:
+          input.l-col--12-of-12#inputProductName(class=blocks['form__input--rounded'] type='text', name='name', placeholder='Name', value=fields.name, required)
+          div
+            label(for='year') Año:
+          input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='year', placeholder='Year', value=fields.year)
+          div
+            label(for='description') Descripcion (ingredientes):
+          input.l-col--12-of-12#inputProductDescription(class=blocks['form__input--rounded'] type='text', name='description', placeholder='Description', value=fields.description, required)
 
-              h4 Notas de cata
-              div
-                label(for='color') Color:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color')
-              div
-                label(for='color') Aroma:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma')
-              div
-                label(for='color') Boca:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca')
-            div
-              label(for='file') Imagen:
-            input.l-col--12-of-12#inputProductImage(class=blocks['form__input--rounded'] type='file' name="file")
-            div
-              input.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] id="submit" type="submit" value="Add product")
-              //button#btnAddProduct Add User
+          h4 Notas de cata
+          div
+            label(for='color') Color:
+          input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color', value=fields.color)
+          div
+            label(for='color') Aroma:
+          input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma', value=fields.aroma)
+          div
+            label(for='color') Boca:
+          input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca', value=fields.mouth)
+          div
+            label(for='file') Imagen:
+          input.l-col--12-of-12#inputProductImage(class=blocks['form__input--rounded'] type='file' name="file")
+          div
+            input.bg__gradient--linear-tertiary(class=blocks['form__submit--rounded'] id="submit" type="submit" value="Add product")
+            //button#btnAddProduct Add User

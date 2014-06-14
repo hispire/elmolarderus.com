@@ -32,19 +32,43 @@ block page
                 label(for='year') Año:
               input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='year', placeholder='Year', value=product.year)
               div
-                label(for='description') Descripcion del producto:
+                label(for='description') Descripcion (ingredientes):
               input.l-col--12-of-12#inputProductDescription(class=blocks['form__input--rounded'] type='text', name='description', placeholder='Description', value=product.description, required)
 
               h4 Notas de cata
-              div
-                label(for='color') Color:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color', value=product.notes[0].color)
-              div
-                label(for='color') Aroma:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma', value=product.notes[0].aroma)
-              div
-                label(for='color') Boca:
-              input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca', value=product.notes[0].mouth)
+              if product.notes.length != 0
+                - var val;
+                if product.notes[0].color
+                  - val = product.notes[0].color;
+                else
+                  - val = '';
+                div
+                  label(for='color') Color:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color', value=val)
+                if product.notes[0].aroma
+                  - val = product.notes[0].aroma;
+                else
+                  - val = '';
+                div
+                  label(for='color') Aroma:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma', value=val)
+                if product.notes[0].mouth
+                  - val = product.notes[0].mouth;
+                else
+                  - val = '';
+                div
+                  label(for='color') Boca:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca', value=val)
+              else
+                div
+                  label(for='color') Color:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='color', placeholder='Color')
+                div
+                  label(for='color') Aroma:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='aroma', placeholder='Aroma')
+                div
+                  label(for='color') Boca:
+                input.l-col--12-of-12#inputProductYear(class=blocks['form__input--rounded'] type='text', name='mouth', placeholder='Boca')
               div.l.l-col--3-of-12.l--last
                 each image in product.images
                   img(src='' + image.url alt='image' + product.name)
