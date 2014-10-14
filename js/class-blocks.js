@@ -93,6 +93,20 @@ var blocks = {
     'l-col--3-of-12-sm', 
     'l-self--align-middle'  
   ],
+'media__figure': [
+    'l', 
+    'l-col--3-of-12', 
+    'l-col--2-of-12-sm', 
+    'l-self--align-middle'  
+  ],
+'media__content': [
+    'l', 
+    'l-col--12-of-12', 
+    'l-col--10-of-12-sm',
+    'l--last-sm', 
+    'l-self--align-middle',
+  ],
+
   'media__figure--xxlarge': [
     'l', 
     'l-col--10-of-12', 
