@@ -3,7 +3,7 @@ section.l-col--12-of-12.background__color--neutral-soft.bg__texture--noise.space
     h3= __("localizacion")
     div.l.l-col--8-of-12-sm
       //iframe.l-col--12-of-12(id="location-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1544.4816551826589!2d-1.5480064146907377!3d39.26639905597202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd66e0d187438f33%3A0xbcbc2490f62dbb57!2sEl+Molar+de+Rus!5e0!3m2!1sen!2ses!4v1394318355183&zoom=18&maptype=satellite" frameborder="0" style="border:0")
-      iframe.l-col--12-of-12.container__border--size-small(id="location-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC0V7EpRDr53DVAQOM9m9YWu39OPsj8QdE&q=el+molar+de+rus,fuentealbilla+albacete&zoom=18&maptype=satellite")
+      iframe.l-col--12-of-12.container__border--size-small(id="location-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC0V7EpRDr53DVAQOM9m9YWu39OPsj8QdE&q=39.277651,-1.531573&zoom=18&maptype=satellite")
     
     div.spacer__margin-bottom--size-large
       p El Molar de Rus, Finca El Molar, s/n, 02360 Fuentealbilla, Albacete
@@ -13,7 +13,7 @@ section.l-col--12-of-12.background__color--neutral-soft.bg__texture--noise.space
         label.font--large(for="saddr")= __("introduce tu ubicacion") 
           span(aria-hidden="true" data-icon!="&#xe60a;")   
       input(class=blocks['form__input--rounded'] type="text" name="saddr" placeholder='Calle mayor 2, Madrid' required)
-      input(type="hidden" name="daddr" value="El Molar de Rus, Finca El Molar, s/n, 02360 Fuentealbilla, Albacete")
+      input(type="hidden" name="daddr" value="39.277651,-1.531573")
       input.background__color--neutral-loud.spacer__margin-left--size-small(class=blocks['form__submit--rounded'] id="submit" type="submit" value=__("como llegar"))
 
   div(id="contact") 
