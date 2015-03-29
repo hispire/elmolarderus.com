@@ -16,10 +16,7 @@ section.l--align-center.separator--style-halfcircle.l-col--12-of-12.background__
         - else
           - var last = ''
         li.tabs(class=blocks['catalog__item'] class=last)
-          article.tab(class=blocks['text-area--secondary'])
-            input(type="radio" id="tab" + (i + 1) name="tab-group-" + (i + 1) checked)
-            label.tab__label(for="tab" + (i + 1))= __("producto")
-            div.tab__content(id="tab__content" + (i + 1))
+          article(class=blocks['text-area--secondary'])
               div.l.l-col--6-of-12.l--last
                 each image in product.images
                   img(src='' + image.url alt="Vino quantum blend")
@@ -28,7 +25,7 @@ section.l--align-center.separator--style-halfcircle.l-col--12-of-12.background__
                   //span.text--xlarge Blend 
                   span #{product.year}
                 p #{product.description}
-          - if(product.notes.length != 0)
+          //- if(product.notes.length != 0)
             arcticle.tab
               input(type="radio" id="tab" + (i + 2) name="tab-group-" + (i + 1))
               label.tab__label.tab__label-2(for="tab" + (i + 2))= __("notas de cata")
